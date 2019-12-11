@@ -32,4 +32,10 @@ describe('RPS#rps') do
     expect(game6.wins?("scissors", "paper")).to(eq(false))
   end
 
+  it("returns false if the object and argument are the same") do
+    game7 = RPS.new()
+    expect(game7.wins?("paper", "paper")).to(eq(false))
+  end
+
+
 end

@@ -15,6 +15,8 @@ class RPS
       true
     elsif (@hand1 == 'scissors') & (@hand2 == 'paper')
       false
+    elsif @hand1 == @hand2 
+      false
     end
   end
 
