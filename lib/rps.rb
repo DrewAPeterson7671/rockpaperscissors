@@ -9,6 +9,8 @@ class RPS
       false
     elsif (@hand1 == 'paper') & (@hand2 == 'rock')
       true
+    elsif (@hand1 == 'paper') & (@hand2 == 'scissors')
+      false
     end
   end
 
