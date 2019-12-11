@@ -22,14 +22,14 @@ describe('RPS#rps') do
     expect(game4.wins?("paper", "scissors")).to(eq(false))
   end
 
-  it("returns true if scissors is the object and rock is the argument") do
+  it("returns false if scissors is the object and rock is the argument") do
     game5 = RPS.new()
-    expect(game5.wins?("scissors", "rock")).to(eq(true))
+    expect(game5.wins?("scissors", "rock")).to(eq(false))
   end
 
-  it("returns false if scissors is the object and paper is the argument") do
+  it("returns true if scissors is the object and paper is the argument") do
     game6 = RPS.new()
-    expect(game6.wins?("scissors", "paper")).to(eq(false))
+    expect(game6.wins?("scissors", "paper")).to(eq(true))
   end
 
   it("returns false if the object and argument are the same") do

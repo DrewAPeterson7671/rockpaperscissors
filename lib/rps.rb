@@ -1,3 +1,4 @@
+
 class RPS
 
   def wins?(hand1, hand2)
@@ -12,12 +13,13 @@ class RPS
     elsif (@hand1 == 'paper') & (@hand2 == 'scissors')
       false
     elsif (@hand1 == 'scissors') & (@hand2 == 'rock')
-      true
-    elsif (@hand1 == 'scissors') & (@hand2 == 'paper')
       false
-    elsif @hand1 == @hand2 
+    elsif (@hand1 == 'scissors') & (@hand2 == 'paper')
+      true
+    elsif @hand1 == @hand2
       false
     end
   end
+
 
 end
