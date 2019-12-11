@@ -7,6 +7,30 @@ class RPS
 
   end
 
+  def hotseat
+    puts 'Make your move, player 1.'
+    hand1 = STDIN.noecho(&:gets).chomp.downcase()
+    puts 'Your turn, player 2.'
+    hand2 = STDIN.noecho(&:gets).chomp.downcase()
+    @hand1 = hand1
+    @hand2 = hand2
+    puts "Player 1: #{hand1}"
+    puts "Player 2: #{hand2}"
+    self.resolution
+
+  end
+
+  def play_computer
+    puts 'Make your move, player 1.'
+    hand1 = STDIN.noecho(&:gets).chomp.downcase()
+    hand2 = self.computer_move
+    @hand1 = hand1
+    @hand2 = hand2
+    puts "Player 1: #{hand1}"
+    puts "Player 2: #{hand2}"
+    self.resolution
+  end
+
   def wins?(hand1, hand2)
     @hand1 = hand1
     @hand2 = hand2
@@ -26,5 +50,15 @@ class RPS
       false
     end
   end
+
+  def resolution
+    if @hand1 == @hand2
+      puts "This is a draw. :-("
+    elsif self.wins?(@hand1, @hand2) == true
+      puts "Player 1 wins!"
+    else puts "Player 2 wins!"
+    end
+  end
+
 
 end
