@@ -1,6 +1,12 @@
 
 class RPS
 
+  def computer_move
+    rps_array = ["rock", "paper", "scissors"]
+    rps_array.sample
+
+  end
+
   def wins?(hand1, hand2)
     @hand1 = hand1
     @hand2 = hand2
@@ -20,6 +26,5 @@ class RPS
       false
     end
   end
-
 
 end
