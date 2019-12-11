@@ -6,5 +6,9 @@ class RPS
     if (@hand1 == 'rock') & (@hand2 == 'scissors')
       true
     end
+    # if (@hand1 == 'rock') & (@hand2 == 'scissors')
+    #   true
+    # end
   end
+
 end
